@@ -1,0 +1,332 @@
+// Fonts Import (Google)
+@import url('https://fonts.googleapis.com/css?family=Rubik');
+
+$breakpoints : (
+
+    's' : (max-width: 767px),
+    'm' : (max-width: 992px),
+    'l' : (max-width: 1200px),
+    'xl' : (max-width: 1440px),
+    'xxl' : (max-width: 1920px),
+
+
+) !default;
+
+
+@mixin respond-to($breakpoint) {
+
+    @if map-has-key($breakpoints, $breakpoint) {
+
+        @media #{inspect(map-get($breakpoints , $breakpoint))} {
+
+            @content;
+
+        }
+
+    }
+
+}
+
+
+* {
+
+    padding : 0px;
+    margin : 0px;
+
+}
+
+.main-container {
+
+    width : 100vw;
+    height : 100vh;
+    margin : 0px;
+    padding : 0px;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    > div.title-header {
+
+        font-size : 3em;
+        color : #dfe6e9;
+        font-family: 'Rubik', sans-serif;
+
+        @include respond-to('l') {
+
+            font-size : 1.8em;
+            color : #dfe6e9;
+
+        }
+
+
+        @include respond-to('m') {
+
+            font-size : 1.6em;
+            color : #dfe6e9;
+
+        }
+
+        @include respond-to('s') {
+
+            font-size : 1.4em;
+            color : #dfe6e9;
+
+        }
+
+    }
+
+    > .login-card {
+
+        width : 700px;
+        height : 500px;
+        margin-top : 30px;
+        
+
+        @include respond-to('l') {
+
+            width : 600px;
+            height : 400px;
+            margin-top : 20px;
+
+        }
+
+        @include respond-to('m') {
+
+            width : 500px;
+            height : 300px;
+            margin-top : 20px;
+
+        }
+
+        @include respond-to('s') {
+
+            width : 400px;
+            height : 200px;
+            margin-top : 20px;
+
+        }
+
+        > .full-content {
+
+            width : 100%;
+            height : 100%;
+            display : flex;
+            margin : 0;
+            padding : 0;
+            flex-direction: column;
+
+            > .flex {
+                flex : 1;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                display: flex;
+
+                > .title {
+                    
+                    margin-left : 50px;
+                    font-family: 'Rubik';
+                    font-weight: 800;
+                    font-size : 1.8em;
+                    color : #636e72;
+                }
+
+                > .sub-title {
+
+                    margin-left :50px;
+                    font-family: 'Rubik';
+                    font-weight: 400;
+                    font-size : 1.3em;
+                    color : #636e72;
+
+                }
+
+                > .text-input {
+
+                    width : 85%;
+    
+                }
+
+                > .button {
+
+                    width : 85%;
+
+                }
+    
+                .mt-top {
+    
+                    margin-top : 20px;
+    
+                }
+
+            }
+
+            .JCStart { justify-content: flex-start; }
+            .AIStart { align-items: flex-start; }
+            .JCEnd { justify-content: flex-end; }
+            .AIEnd { align-items: flex-end; }
+
+
+        }
+        
+
+    }
+
+    > .col-l { 
+
+    
+    }
+
+    > .col-m {
+
+
+    }
+
+    > .col-s {
+
+        
+    }
+    
+}
+
+.content-container {
+
+    display : flex;
+    flex : 1;
+    width : 100vw;
+    height : 100vh;
+
+    > .artwork {
+
+        z-index: 0;
+        width : 100%;
+        background-image : url(https://wallpaperplay.com/walls/full/f/3/d/121407.jpg);
+        background-repeat : no-repeat;
+        background-size : cover;
+        background-position-y: 35%;
+        height : 300px;
+
+        @include respond-to('xxl') {
+
+            height : 450px;
+
+        }
+
+        @include respond-to('xl') {
+
+            height : 400px;
+
+        }
+
+
+        @include respond-to('l') {
+
+            height : 400px;
+
+        }
+
+        @include respond-to('m') {
+
+            hegiht : 300px;
+
+        }
+
+        @include respond-to('s') {
+
+            height : 250px;
+
+        }
+
+    }
+
+
+    
+
+}
+
+.drawer {
+
+
+    @include respond-to('xxl') {
+
+        width : 400px;
+
+    }
+
+    @include respond-to('xl') {
+
+        width : 350px;
+
+    }
+
+    @include respond-to('l') {
+
+        width : 300px;
+
+    }
+
+    @include respond-to('m') {
+        
+        width : 250px
+
+    }
+
+    @include respond-to('s') {
+
+        width : 200px;
+
+    }
+
+    > .full-list {
+
+        width : auto;
+        height : 100vh;
+        background-color : #353b48;
+    }
+
+}
+
+
+
+.material-icons {
+
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;  /* Preferred icon size */
+    display: inline-block;
+    line-height: 1;
+    text-transform: none;
+    letter-spacing: normal;
+    word-wrap: normal;
+    white-space: nowrap;
+    direction: ltr;
+  
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+  
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+  
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+
+
+    
+
+}
+
+.app-bar-title {
+
+    font-size : 20px;
+    font-family: 'Rubik';
+    font-weight: 400;
+
+}
+
+
+.light { color : #f5f6fa; }
