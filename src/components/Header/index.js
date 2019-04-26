@@ -4,6 +4,7 @@ import PropTypes from 'prop-types'
 // #Redux
 import { connect } from 'react-redux'
 import { openDrawer } from '../../redux/actions/OpenDrawerAction'
+import { openDialog } from '../../redux/actions/OpenDialogAction'
 // #Layouts & Components
 import { withStyles } from '@material-ui/core/styles'
 import AppBar from '@material-ui/core/AppBar'
@@ -97,7 +98,7 @@ const HeaderBarStyles = (props) => {
                    <i className={'material-icons light'}>menu</i>
                 </IconButton>
                 <pre className={'app-bar-title'}>
-                    Recode Dashboard
+                    Recode Console
                 </pre>
                 <div className={classes.search}>
                     <div className={classes.searchIcon}>
@@ -116,7 +117,7 @@ const HeaderBarStyles = (props) => {
                 <IconButton color={'inherit'}>
                     <i className={'material-icons light'}>inbox</i>
                 </IconButton>
-                <IconButton color={'inherit'}>
+                <IconButton onClick={() => props.openDialog(!props.openDialogState.isDialogOpen)} color={'inherit'}>
                     <i className={'material-icons light'}>account_circle</i>
                 </IconButton>
                 </div>
@@ -130,10 +131,11 @@ const HeaderBarStyles = (props) => {
 
 
 const mapStateToProps = state => ({
-    isOpenDrawer : state.openDrawerReducer.isOpenDrawer
+    isOpenDrawer : state.openDrawerReducer.isOpenDrawer,
+    openDialogState : state.openDialogReducer
 })
 const HeaderBar = withStyles(styles)(HeaderBarStyles)
-const Header = connect( mapStateToProps  , { openDrawer })(HeaderBar)
+const Header = connect( mapStateToProps  , { openDrawer , openDialog })(HeaderBar)
 
 export {
 

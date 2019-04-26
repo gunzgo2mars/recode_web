@@ -17,8 +17,7 @@ export default (state = initialStatae , action) => {
                 isOpenDrawer : action.payload
             }
         default:
-            return state;
-
+            return state
     }
 
 }
