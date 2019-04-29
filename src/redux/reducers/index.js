@@ -4,6 +4,12 @@ import { combineReducers } from 'redux'
 import OpenDrawerReducer from './OpenDrawerReducer'
 import OpenComponentReducer from './OpenComponentReducer'
 import OpenDialogReducer from './OpenDialogReducer'
+
+import StepperReducer from './StepperReducer'
+import ProductFormReducer from './ProductFormReducer'
+import PlaceFormReducer from './PlaceFormReducer'
+import CategoriesFormReducer from './CategoriesFormReducer'
+
 // API
 import AuthReducer from './AuthReducer'
 
@@ -12,6 +18,10 @@ export default combineReducers({
     openDrawerReducer : OpenDrawerReducer,
     openComponentReducer : OpenComponentReducer,
     authReducer : AuthReducer,
-    openDialogReducer : OpenDialogReducer
+    openDialogReducer : OpenDialogReducer,
+    stepperReducer : StepperReducer,
+    productFormReducer : ProductFormReducer,
+    placeFormReducer : PlaceFormReducer,
+    categoriesReducer : CategoriesFormReducer
 
 })

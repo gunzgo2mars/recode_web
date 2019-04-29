@@ -12,15 +12,12 @@ export default (state = initialState , action) => {
 
         case AUTH_ADMIN :
 
-            console.log(action.payload)
-
             return {
 
                 ...state,
                 payload : action.payload
 
             }
-            
 
         default :
             return state
