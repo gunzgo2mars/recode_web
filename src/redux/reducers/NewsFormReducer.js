@@ -21,7 +21,10 @@ const initialState = {
     news_ref : null,
     news_firstimage : null,
     news_secondimage : null,
-    news_thirdimage : null
+    news_thirdimage : null,
+    news_previewfirst : null,
+    news_previewsecond : null,
+    news_previewthird : null
 
 
 }
@@ -63,20 +66,22 @@ export default (state = initialState , action) => {
         case NEWS_FIRSTIMAGE :
             return {
                 ...state,
-                news_firstimage : action.file
+                news_firstimage : action.file,
+                news_previewfirst : action.preview
             }
         
         case NEWS_SECONDIMAGE :
             return {
                 ...state,
-                news_secondimage : action.file
+                news_secondimage : action.file,
+                news_previewsecond : action.preview
             }
 
         case NEWS_THIRDIMAGE : 
             return {
                 ...state,
-                news_thirdimage : action.file
-
+                news_thirdimage : action.file,
+                news_previewthird : action.preview
             }
         
         default : return state

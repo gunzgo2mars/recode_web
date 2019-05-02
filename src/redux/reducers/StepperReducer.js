@@ -1,9 +1,11 @@
-import { STEPPER_PRODUCT , STEPPER_PLACES } from '../actions/type'
+import { STEPPER_PRODUCT , STEPPER_PLACES , STEPPER_ADMIN , STEPPER_NEWS } from '../actions/type'
 
 const initialState = {
 
     productStepperActive : 0,
-    placesStepperActive : 0
+    placesStepperActive : 0,
+    adminStepperActive : 0,
+    newsStepperActive : 0
 
 }
 
@@ -24,6 +26,18 @@ export default (state = initialState , action) => {
             return {
                 ...state,
                 placesStepperActive : action.step
+            }
+
+        case STEPPER_ADMIN :
+            return {
+                ...state,
+                adminStepperActive : action.step
+            }
+
+        case STEPPER_NEWS : 
+            return {
+                ...state,
+                newsStepperActive : action.step
             }
 
         default : 

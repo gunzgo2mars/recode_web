@@ -83,7 +83,7 @@ class Login extends React.Component {
                 if(this.props.authPayload.payload !== null) {
 
                     sessionStorage.setItem('payload' , JSON.stringify(this.props.authPayload.payload))
-
+                    sessionStorage.setItem('token' ,JSON.stringify(this.props.authPayload.payload.token))
                     this.props.history.push(`/console`)
 
                 }

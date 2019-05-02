@@ -10,7 +10,8 @@ import {
     PRODUCT_FIRSTIMAGE,
     PRODUCT_SECONDIMAGE,
     PRODUCT_THIRDIMAGE,
-
+    PRODUCT_CATEGORY,
+    PRODUCT_BRAND,
     // Place Types
 
     PLACE_NAME,
@@ -53,6 +54,9 @@ const ProductThumbnail = (file) => dispatch => { dispatch({ type : PRODUCT_THUMB
 
 const ProductDetail = (detail) => dispatch => { dispatch({ type : PRODUCT_DETAIL , detail : detail }) }
 const ProductPrice = (price) => dispatch => { dispatch({ type : PRODUCT_PRICE , price : price }) }
+
+const ProductCategory = (category) => dispatch => { dispatch({ type : PRODUCT_CATEGORY , category : category }) }
+const ProductBrand = (brand) => dispatch => { dispatch({ type : PRODUCT_BRAND , brand : brand }) }
 
 const ProductFirstImage = (file) => dispatch => { 
 
@@ -143,13 +147,14 @@ const PlaceThirdImage = (file) => dispatch => {
 
 }
 
+// Categories Form Action
 const CategoriesName = (name) => dispatch => { dispatch({ type : CATEGORIES_NAME , name : name }) }
-
+// Admin Form Action
 const AdminEmail = (email) => dispatch => { dispatch({ type : ADMIN_EMAIL , email : email }) }
 const AdminPassword = (password) => dispatch => { dispatch({ type : ADMIN_PASSWORD , password : password }) }
 const AdminFirstName = (firstname) => dispatch => { dispatch({ type : ADMIN_FIRSTNAME , firstname : firstname }) }
 const AdminLastName = (lastname) => dispatch => { dispatch({ type : ADMIN_LASTNAME , lastname : lastname }) }
-
+// News Form Action
 const NewsTitle = (title) => dispatch => { dispatch({ type : NEWS_TITLE , title : title }) }
 const NewsDes = (des) => dispatch => { dispatch({ type : NEWS_DES , des : des }) }
 const NewsThumbnail = (file) => dispatch => { dispatch({ type : NEWS_THUMBNAIL , file : file }) }
@@ -208,6 +213,8 @@ export {
     ProductFirstImage,
     ProductSecondImage,
     ProductThirdImage,
+    ProductCategory,
+    ProductBrand,
 
     // Place Form Actions
 

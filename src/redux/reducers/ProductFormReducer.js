@@ -7,7 +7,9 @@ import {
     PRODUCT_PRICE,
     PRODUCT_FIRSTIMAGE,
     PRODUCT_SECONDIMAGE,
-    PRODUCT_THIRDIMAGE
+    PRODUCT_THIRDIMAGE,
+    PRODUCT_CATEGORY,
+    PRODUCT_BRAND
 
 } from '../actions/type'
 
@@ -21,6 +23,8 @@ const initialState = {
     product_firstimage : null,
     product_secondimage : null,
     product_thirdimage : null,
+    product_category : null,
+    product_brand : null,
     preview_productfirst : null,
     preview_productsecond : null,
     preview_productthird : null,
@@ -104,6 +108,22 @@ export default (state = initialState, action) => {
                 ...state,
                 product_thirdimage : action.file,
                 preview_productthird : action.preview
+
+            }
+
+        case PRODUCT_CATEGORY : 
+            return {
+
+                ...state,
+                product_category : action.category
+
+            }
+
+        case PRODUCT_BRAND : 
+            return {
+
+                ...state,
+                product_brand : action.brand
 
             }
 

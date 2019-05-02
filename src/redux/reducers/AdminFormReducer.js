@@ -23,14 +23,14 @@ export default (state = initialState , action) => {
 
             return {
                 ...state,
-                admin_password : action.admin_password
+                admin_password : action.password
             }
 
         case ADMIN_FIRSTNAME :
             
             return {
                 ...state,
-                admin_firstname : action.admin_firstname
+                admin_firstname : action.firstname
 
             }
 
@@ -38,7 +38,7 @@ export default (state = initialState , action) => {
 
             return {
                 ...state,
-                admin_lastname : action.admin_lastname
+                admin_lastname : action.lastname
             }
 
         default : return state

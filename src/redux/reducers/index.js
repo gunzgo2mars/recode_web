@@ -9,6 +9,8 @@ import StepperReducer from './StepperReducer'
 import ProductFormReducer from './ProductFormReducer'
 import PlaceFormReducer from './PlaceFormReducer'
 import CategoriesFormReducer from './CategoriesFormReducer'
+import NewsFormReducer from './NewsFormReducer'
+import AdminFormReducer from './AdminFormReducer'
 
 // API
 import AuthReducer from './AuthReducer'
@@ -22,6 +24,8 @@ export default combineReducers({
     stepperReducer : StepperReducer,
     productFormReducer : ProductFormReducer,
     placeFormReducer : PlaceFormReducer,
-    categoriesReducer : CategoriesFormReducer
+    categoriesFormReducer : CategoriesFormReducer,
+    newsFormReducer : NewsFormReducer,
+    adminFormReducer : AdminFormReducer
 
 })

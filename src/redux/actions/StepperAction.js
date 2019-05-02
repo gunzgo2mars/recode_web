@@ -1,4 +1,4 @@
-import { STEPPER_PLACES , STEPPER_PRODUCT } from './type'
+import { STEPPER_PLACES , STEPPER_PRODUCT , STEPPER_NEWS , STEPPER_ADMIN } from './type'
 
 
 const productActiveStepper = (step) => dispatch => {
@@ -23,9 +23,33 @@ const placeActiveStepper = (step) => dispatch => {
 
 }
 
+const adminActiveStepper = (step) => dispatch => {
+
+    dispatch({
+
+        type : STEPPER_ADMIN,
+        step : step
+
+    })
+
+}
+
+const newsActiveStepper = (step) => dispatch => {
+
+    dispatch({
+
+        type : STEPPER_NEWS,
+        step : step
+
+    })
+
+}
+
 export {
 
     productActiveStepper,
-    placeActiveStepper
+    placeActiveStepper,
+    adminActiveStepper,
+    newsActiveStepper
 
 }

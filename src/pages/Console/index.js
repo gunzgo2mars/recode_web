@@ -37,7 +37,7 @@ class Console extends React.Component {
 
 
     componentDidMount() {
-
+        
         console.log('Redux : ' + this.props.authPayload.payload)
 
     }
@@ -63,20 +63,15 @@ class Console extends React.Component {
                             "icon" : "add_circle"
                         },
                         {
-                            "text" : "Read",
+                            "text" : "List",
                             "link" : "read",
-                            "icon" : 'description'
+                            "icon" : 'list_alt'
                         },
                         {
-                            "text" : "Update",
+                            "text" : "Report",
                             "link" : "update",
-                            "icon" : 'update'
+                            "icon" : 'insert_chart'
                         },
-                        {
-                            "text" : "Delete",
-                            "link" : "delete",
-                            "icon" : "delete_sweep"
-                        }
                     ]} />
                     <div className={'content-container'} style={{ zIndex: 0 }}>
                         
